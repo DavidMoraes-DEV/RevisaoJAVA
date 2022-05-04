@@ -2,7 +2,7 @@ package RevisaoConceitoJAVA;
 
 import java.util.Locale;
 
-public class ExercicioEntradaSaidaDeDados {
+public class ExercicioSaidaDeDados {
 
 	public static void main(String[] args) {
 
