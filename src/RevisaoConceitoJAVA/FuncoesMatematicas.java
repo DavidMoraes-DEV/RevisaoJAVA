@@ -13,7 +13,7 @@ public class FuncoesMatematicas {
 		
 		//Função matemática para calcular a Raiz quadrada: Math.sqrt();
 		double raizQuadrada = Math.sqrt(x1);
-		System.out.printf("%nA raiz quadrada de %d eh: %.1f%n%n", x1, raizQuadrada);
+		System.out.printf("A raiz quadrada de %d eh: %.1f%n%n", x1, raizQuadrada);
 
 		//Função matemática para calcular a potencia de X por Y: Math.pow(x, y);
 		System.out.printf("Calcular potência de X: ");
@@ -25,9 +25,12 @@ public class FuncoesMatematicas {
 		
 		//Função matemática para VALOR ABSOLUTO: Math.obs();
 		double x4 = -20;
-		System.out.println("Calcula o valor absoluto da variável(Ex: x4 = -20");
+		System.out.printf("%n%nCalcula o valor absoluto da variável(Ex: x4 = -20)");
 		double absoluto = Math.abs(x4);
-		System.out.printf("Após calcular o valor absoluto ficou: %.2f", absoluto);
+		System.out.printf("%nApós calcular o valor absoluto ficou: %.2f", absoluto);
+		
+		//Necessário fechar o Scanner após utiliza-lo.
+		sc.close();
 		
 		/*EXEMPLO: Funções matemáticas utilizadas em calculos mais complexos como a FORMULA DE BhASKARA:
 		-FÓRMULA de BhASKARA eh: X = -b +/- RaizQuadrada(de DELTA(onde DELTA eh: A² - 4.B.C)) dividido por 2.a
