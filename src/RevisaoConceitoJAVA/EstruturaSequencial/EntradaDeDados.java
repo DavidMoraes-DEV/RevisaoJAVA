@@ -1,4 +1,4 @@
-package RevisaoConceitoJAVA;
+package RevisaoConceitoJAVA.EstruturaSequencial;
 
 import java.util.Locale;
 import java.util.Scanner;

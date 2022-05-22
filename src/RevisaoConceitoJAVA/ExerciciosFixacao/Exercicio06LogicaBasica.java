@@ -1,8 +1,8 @@
-package RevisaoConceitoJAVA;
+package RevisaoConceitoJAVA.ExerciciosFixacao;
 
 import java.util.Locale;
 
-public class ExercicioSaidaDeDados {
+public class Exercicio06LogicaBasica {
 
 	public static void main(String[] args) {
 
@@ -27,3 +27,4 @@ public class ExercicioSaidaDeDados {
 		
 	}
 }
+//Exercício básica de saída de dados

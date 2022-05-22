@@ -1,4 +1,4 @@
-package RevisaoConceitoJAVA;
+package RevisaoConceitoJAVA.EstruturaSequencial;
 
 public class ProcDeDadosCasting {
 

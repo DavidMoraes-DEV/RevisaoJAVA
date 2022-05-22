@@ -11,7 +11,7 @@ public class Exercicio05LogicaBasica {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.printf("Digite o cód da peça 01: ");
-		int idPeca = sc.nextInt();
+		int idPeca1 = sc.nextInt();
 		System.out.printf("Digite a quantidade: ");
 		int qtdPeca = sc.nextInt();
 		System.out.printf("Digite o valor unitário: ");
@@ -20,7 +20,7 @@ public class Exercicio05LogicaBasica {
 		double aPagarPeca1 = qtdPeca * valorUnd;
 		
 		System.out.printf("%nDigite o cód da peça 02: ");
-		idPeca = sc.nextInt();
+		int idPeca2 = sc.nextInt();
 		System.out.printf("Digite a quantidade: ");
 		qtdPeca = sc.nextInt();
 		System.out.printf("Digite o valor unitário: ");
@@ -30,6 +30,7 @@ public class Exercicio05LogicaBasica {
 		
 		double totalPg = aPagarPeca1 + aPagarPeca2;
 		
+		System.out.printf("Cód das peças 01 e 02: %d e %d", idPeca1, idPeca2);
 		System.out.printf("%nVALOR A PAGAR: %.2f", totalPg);
 		
 		sc.close();
