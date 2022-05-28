@@ -19,6 +19,7 @@ public class operadorBitwise {
 			System.out.printf("O 6 bit do número %d é diferente de 1", n);
 		}
 		
+		sc.close();
 	}
 }
 /*
