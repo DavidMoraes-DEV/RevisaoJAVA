@@ -7,11 +7,21 @@ public class Product {
 	public double price;
 	public int quantity;
 	
-	//Construtor
+	//Construtor Padrão: Permite instanciar um objeto sem a obrigação de colocar parâmetros de entrada. No JAVA o construtor padrão não precisa ser declarado manualmente dessa forma se não definir outro construtor que receba parâmetros na classe.
+	public Product() {
+	}
+	
+	//Construtor com parâmetros de entrada
 	public Product(String name, double price, int quantity) {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
+	}
+	
+	//SOBRECARGA de um construtor sem o parãmetro quantidade. Para que seja possível cadastrar um produto sem a quantidade inicial se o usuário precisar.
+	public Product(String name, double price) {
+		this.name = name;
+		this.price = price;
 	}
 
 	//Métodos
