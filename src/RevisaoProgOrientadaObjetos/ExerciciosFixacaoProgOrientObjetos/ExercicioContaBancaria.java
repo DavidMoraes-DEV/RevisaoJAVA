@@ -15,7 +15,8 @@ public class ExercicioContaBancaria {
 		int numConta = sc.nextInt();
 		
 		System.out.print("Nome do Titular: ");
-		String Titular = sc.next();
+		sc.nextLine(); //Limpeza de buffer por conta da entrada "ENTER" anterior pendente na memória.
+		String Titular = sc.nextLine();
 		
 		ContaBancaria contaBancaria = new ContaBancaria(numConta, Titular);
 		
@@ -41,6 +42,8 @@ public class ExercicioContaBancaria {
 		
 		System.out.printf("%nDADOS DA CONTA ATUALIZADOS:%n");
 		System.out.println(contaBancaria);
+		
+		sc.close();
 	}
 }
 /*

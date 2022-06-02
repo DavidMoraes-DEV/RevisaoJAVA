@@ -14,7 +14,7 @@ public class ExercicioFuncionario {
 		
 		System.out.println("CADASTRO DE FUNCIONÁRIO:");
 		System.out.printf("%nNome: ");
-		funcionario.nome = sc.next();
+		funcionario.nome = sc.nextLine();
 		
 		System.out.print("Salario Bruto: ");
 		funcionario.salarioBruto = sc.nextDouble();

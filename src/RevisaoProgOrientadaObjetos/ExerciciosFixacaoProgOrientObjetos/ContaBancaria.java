@@ -13,11 +13,11 @@ public class ContaBancaria {
 		this.nomeTitular = nomeTitular;
 	}
 	
-	//CONSTRUTOR
-	public ContaBancaria (int numeroConta, String nomeTitular, double saldo) {
+	//CONSTRUTOR SOBRECARGA
+	public ContaBancaria (int numeroConta, String nomeTitular, double depositoInicial) {
 		this.numeroConta = numeroConta;
 		this.nomeTitular = nomeTitular;
-		this.saldo = saldo;
+		this.deposito(depositoInicial); //ENCAPSULANDO A REGRA DE NEGÓCIO: Previne manutenção em mais de um lugar no futuro pois se as regras de depósito inicial mudar haverá a necessidade de alteração apenas no método de depósito protegendo então o deposito inicial que será feito pelo método de depósito
 	}
 	
 	//ACESSA O ATRIBUTO NUMERO DA CONTA
