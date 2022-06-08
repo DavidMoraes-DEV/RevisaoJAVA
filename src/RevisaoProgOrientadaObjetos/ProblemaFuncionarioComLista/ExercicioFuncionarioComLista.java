@@ -35,22 +35,20 @@ public class ExercicioFuncionarioComLista {
 		int idFuncionarioAumento = sc.nextInt();
 		
 		Funcionario funcionario = listaFuncionarios.stream().filter(x -> x.getId() == idFuncionarioAumento).findFirst().orElse(null);
-		if(funcionario == null) {
-			System.out.println("Esse ID não existe!!!");
-		}else {
-		System.out.print("Digite o valor de aumento(%): ");
-		double valorPercAumento = sc.nextDouble();
-		funcionario.aumentoSalario(valorPercAumento);
-		}
+			if(funcionario == null) {
+				System.out.println("Esse ID não existe!!!");
+			}else {
+				System.out.print("Digite o valor de aumento(%): ");
+				double valorPercAumento = sc.nextDouble();
+				funcionario.aumentoSalario(valorPercAumento);
+			}
 		
 		for(Funcionario obj : listaFuncionarios) {
 			System.out.println(obj);
 		}
 		
-		
 		sc.close();
 	}
-
 }
 /*
 EXERCICIO: Fazer um programa para ler um número inteiro N e depois os dados (id, nome e salario) de N funcionários. Não deve haver repetição de id.
