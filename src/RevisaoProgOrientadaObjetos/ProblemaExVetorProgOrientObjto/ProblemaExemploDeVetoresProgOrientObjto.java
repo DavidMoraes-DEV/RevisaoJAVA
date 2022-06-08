@@ -18,16 +18,23 @@ public class ProblemaExemploDeVetoresProgOrientObjto {
 		for(int i=0; i<qtdProdutos; i++) {
 			System.out.printf("%nCadastro do Produto %d:%n", i+1);
 			System.out.print("Nome: ");
-			String nome = sc.next();
+			sc.nextLine();
+			String nome = sc.nextLine();
 			System.out.print("Preço: ");
 			double preco = sc.nextDouble();
 
 			produtos[i] = new Produto(nome, preco);
 		}
 		
-		double soma = produtos[0].getPreco();
-		for(int i=1; i<produtos.length; i++) {
+		double soma = 0;
+		
+		/*for(int i=1; i<produtos.length; i++) {
 			soma += produtos[i].getPreco();
+		}*/
+		
+		//Exemplo utilizando o for-each
+		for(Produto obj : produtos) {
+			soma += obj.getPreco();
 		}
 		
 		double media = soma/produtos.length;
