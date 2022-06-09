@@ -19,7 +19,6 @@ public class RevisaoMatrizes {
 		int[][] matrizDeNumeros = new int[qtdLinhas][qtdColunas];
 		
 		for(int i=0; i<matrizDeNumeros.length; i++) {
-			System.out.printf("Digite os valores da %d linha: %n", i+1);
 			for(int j=0; j<matrizDeNumeros[0].length; j++) {
 				matrizDeNumeros[i][j] = sc.nextInt();
 			}
@@ -38,7 +37,7 @@ public class RevisaoMatrizes {
 			System.out.println("Matriz não possui Diagonal Principal!!!");
 		}
 		
-		System.out.printf("%nQuantidade de Números negativos na Matriz: ");
+		System.out.printf("%nQuantidade de números negativos na Matriz: ");
 		int qtdNegativos = 0;
 		for(int i=0; i<matrizDeNumeros.length; i++) {
 			for(int j=0; j<matrizDeNumeros[0].length; j++) {
