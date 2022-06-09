@@ -32,7 +32,6 @@ public class RevisaoDate {
 		//Para imprimir no formato local UTC deverá instanciar um novo SimpleDateFormat DEFININDO o TIMEZONE = GMT
 		SimpleDateFormat sdf3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); //Declaração igual as anteriores acima.
 		sdf3.setTimeZone(TimeZone.getTimeZone("GMT"));
-		
 		System.out.printf("%nData no formato ISO8601 formatado com TimeZone = GMT: " + sdf3.format(date5));
 		
 	
