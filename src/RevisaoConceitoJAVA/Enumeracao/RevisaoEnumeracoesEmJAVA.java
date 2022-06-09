@@ -16,7 +16,6 @@ public class RevisaoEnumeracoesEmJAVA {
 		
 		System.out.println(os1);
 		System.out.println(os2);
-		
 	}
 }
 /*
