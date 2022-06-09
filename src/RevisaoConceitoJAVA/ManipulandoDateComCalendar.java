@@ -44,6 +44,5 @@ public class ManipulandoDateComCalendar {
 		int ano = cal.get(Calendar.YEAR); 
 		System.out.println("Ano: " + ano);
 		
-		
 	}
 }
