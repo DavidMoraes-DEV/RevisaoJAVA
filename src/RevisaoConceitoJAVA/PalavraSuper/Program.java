@@ -11,7 +11,7 @@ public class Program {
 		Account account1 = new Account(1001, "Alex", 1000.00);
 		account1.withdraw(200.0); //Realiza o saque de R$ 200.00 + a taxa padrão  de R$ 5.00, para contas do tipo (Account)=CONTA COMUM.
 		
-		System.out.printf("Conta do tipo: ACCOUNT(Saque -> TAXA PADRÃO = R$ 5.00)%nSALDO INICIAL: 1000.00%nSaque de R$ 200.00%n");
+		System.out.printf("Conta do tipo: ACCOUNT(Saque -> TAXA PADRÃO = R$ 5.00):%nSALDO INICIAL: 1000.00%nSaque de R$ 200.00%n");
 		System.out.printf("%n- DADOS ATUALIZADOS DA CONTA:%n");
 		System.out.println(account1);
 		
