@@ -9,31 +9,34 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		
 		Account account1 = new Account(1001, "Alex", 1000.00);
-		account1.withdraw(200.0); //Realiza o saque de R$ 200.00 + a taxa padrão  de R$ 5.00, para contas do tipo (Account)=CONTA COMUM.
+		account1.withdraw(200.0);
 		
 		System.out.printf("Conta do tipo: ACCOUNT(Saque -> TAXA PADRÃO = R$ 5.00):%nSALDO INICIAL: 1000.00%nSaque de R$ 200.00%n");
 		System.out.printf("%n- DADOS ATUALIZADOS DA CONTA:%n");
 		System.out.println(account1);
 		
-		Account account2 = new SavingsAccount(1002, "Maria", 1000.00, 0.01);
-		account2.withdraw(200.0); //Conta do tipo Poupança(SavingsAccount), não utiliza a taxa padrão de R$ 5.00 para realizar saques, utilizando a sobreposição do método WITHDRAW da classe base ACCOUNT.
+		Account account2 = new SavingsAccount(1002, "Maria", 1000.00, 0.01); //POLIMORFISMO
+		account2.withdraw(200.0); //VariáveL do mesmo TIPO ACCOUNT da variável ACCOUNT1, porém apontando para um tipo diferente: SAVINGSACCOUNT
 		
 		System.out.printf("%nConta do tipo: SAVINGS ACCOUNT(Saque -> Sem TAXAS):%nSALDO INICIAL: 1000.00%nSaque de R$ 200.00%n");
 		System.out.printf("%n- DADOS ATUALIZADOS DA CONTA:%n");
 		System.out.println(account2);
 		
-		Account account3 = new BusinessAccount(1003, "Junior", 1000.00, 500.00); 
-		account3.withdraw(200.0); //Método com a sobreposição utilizando a palavra SUPER para aplicar um sobreposição ao método saque(withdrow) para contas do tipo empresarial(Business) ADICIONANDO uma taxa extra específica para conta empresarial de R$ 2.00, além das taxas da conta normal(Account).
-		
-		System.out.printf("%nConta do tipo: BUSINESS ACCOUNT%nSALDO INICIAL: 1000.00%nSaque de R$ 200.00 (Saque -> TAXA PADRÃO + R$ 2.00):%n"); 
-		System.out.printf("%n- DADOS ATUALIZADOS DA CONTA:%n");
-		System.out.println(account3);
-		
 	}
 }
 /*
-* PALAVRA SUPER
-	- É possível chamar a implementação da super classe usando a palara super.
+* POLIMORFISMO: 
+	- Em programação Orientada a Objetos, polimorfismo é um recurso que permite que variáveis de um mesmo tipo mais genérico possam
+	apontar para objetos de tipos específicos diferentes, tendo assim comportamentos diferentes conforme cada tipo específico.
 	
-* EXEMPLO: Suponha que na classe BusinessAccount, a regra para saque seja realizar o saque normalmente da superclasse(VALOR DO SAQUE = TAXA DE 5.00), e descontar mais 2.0 
- */
+	- Pegando os exemplo das classes account desse exemplo o objeto ACCOUNT1 e ACCOUNT2 embora seja do mesmo tipo ACCOUNT
+		- Account1 foi instanciado um objeto do tipo Account
+		- Account2 foi instanciado um  objeto do tipo SavingsAccount
+		- Então embora sejam do mesmo tipo apontam para objetos de tipos diferentes tendo comportamentos diferentes pois
+		a implementação da método WITHDRAW foi programadas com um comportamento diferentes específicas para cada tipo.
+		
+* IMPORTANTE INTENDER:
+	- A associação do tipo específico com o tipo genérico é feita em tempo de execução (upcasting)
+	- O compilador não sabe para qual tipo específico a chamada do método withdraw está sendo feita (compilador apenas sabe que são duas variáveis tipo Account)
+
+*/

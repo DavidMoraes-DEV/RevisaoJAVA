@@ -1,4 +1,4 @@
-package RevisaoConceitoJAVA.PalavraSuper;
+package RevisaoConceitoJAVA.Polimorfismo;
 
 public class SavingsAccount extends Account {
 
@@ -22,7 +22,7 @@ public class SavingsAccount extends Account {
 	}
 	
 	@Override 
-	public final void withdraw(Double amount) {
+	public void withdraw(Double amount) {
 		balance -= amount;
 	}
 	
