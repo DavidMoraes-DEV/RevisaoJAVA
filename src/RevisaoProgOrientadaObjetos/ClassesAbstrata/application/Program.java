@@ -64,6 +64,7 @@ public class Program {
 * CLASSES ABSTRATAS:
 	- São classes que não podem ser instanciadas
 	- É uma forma de garantir herança total: Somente subclasses não abstratas podem ser instanciadas, mas nunca a super classe abstratas
+	- NOTAÇÃO UML: ITÁLICO
 
 * EXEMPLO
 	- Suponha que em um negócio relacionado a banco, apenas contas poupança(Savings Account) e contas para empresas (BusinessAccount) são permitidas.
