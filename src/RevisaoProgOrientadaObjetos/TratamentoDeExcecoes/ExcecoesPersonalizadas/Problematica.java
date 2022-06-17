@@ -2,9 +2,22 @@ package RevisaoProgOrientadaObjetos.TratamentoDeExcecoes.ExcecoesPersonalizadas;
 class Problematica {}
 /*
  * PARA MELHOR COMPREENÇÃO DA IMPORTANCIA DO TRATAMENTO DE EXCEÇÕES ADEQUADAS SERÁ RESOLVIDO ESSE PROBLEMA ABAIXO DE TRÊS FORMAS:
-   - SOLUÇÃO MUITO RUIM: Aplicar toda lógica de programação no programa principal
-   - SOLUÇÃO RUIM: Implementar um método para retornar a mensagem de erro como String
-   - SOLUÇÃO BOA: Utilizar o TRATAMENTO DE EXCEÇÕES de forma adequada
+	- SOLUÇÃO MUITO RUIM: Aplicar toda lógica de programação no programa principal
+	- SOLUÇÃO RUIM: Implementar um método para retornar a mensagem de erro como String
+	- SOLUÇÃO BOA: Utilizar o TRATAMENTO DE EXCEÇÕES de forma adequada
+   
+	- Cláusula throws: propaga a exceção ao invés de trata-la
+	- Cláusula throw: lança a exceção / "corta" o método
+ 	- Exception: compilador obriga a tratar ou propagar
+	- RuntimeException: compilador não obriga
+ 
+ 	- O modelo de tratamento de exceções permite que erros sejam tratados de forma consistente e flexível, usando boas práticas
+ 		- Vantagens:
+			- Lógica delegada
+			- Construtores podem ter tratamento de exceções
+			- Possibilidade de auxílio do compilador (Exception)
+			- Código mais simples. Não há aninhamento de condicionais: a qualquer momento que uma exceção for disparada, a execução é interrompida e cai no bloco catch correspondente.
+			- É possível capturar inclusive outras exceções de sistema
  
 * Fazer um programa para ler os dados de uma reserva de hotel:
 	- Contendo: Número do quarto, data de entrada e data de saída
@@ -21,27 +34,27 @@ class Problematica {}
 	- EXEMPLOS
 		- ENTRADAS DE DADOS:
 			Room number: 8021
-			Check-in date (dd/MM/yyyy): 23/09/2019
-			Check-out date (dd/MM/yyyy): 26/09/2019
-			Reservation: Room 8021, check-in: 23/09/2019, check-out: 26/09/2019, 3 nights
+			Check-in date (dd/MM/yyyy): 23/09/2030
+			Check-out date (dd/MM/yyyy): 26/09/2030
+			Reservation: Room 8021, check-in: 23/09/2030, check-out: 26/09/2030, 3 nights
 			
 			Enter data to update the reservation:
-			Check-in date (dd/MM/yyyy): 24/09/2019
-			Check-out date (dd/MM/yyyy): 29/09/2019
-			Reservation: Room 8021, check-in: 24/09/2019, check-out: 29/09/2019, 5 nights
+			Check-in date (dd/MM/yyyy): 24/09/2030
+			Check-out date (dd/MM/yyyy): 29/09/2030
+			Reservation: Room 8021, check-in: 24/09/2030, check-out: 29/09/2030, 5 nights
 
 		- POSSÍVEIS ERROS(EXCEÇÕES) AO INSERIR OS DADOS:
 			- POSSIBILIDADE 1: Digitar uma data de entrada superior a data de saída no momento do cadastro inicial da reserva.
 				Room number: 8021
-				Check-in date (dd/MM/yyyy): 23/09/2019
-				Check-out date (dd/MM/yyyy): 21/09/2019
+				Check-in date (dd/MM/yyyy): 23/09/2030
+				Check-out date (dd/MM/yyyy): 21/09/2030
 				Error in reservation: Check-out date must be after check-in date                -> O programa deve conseguir detectar essa exceção e trata-la para gerar esse aviso sem interromper o sistema
 
 			- POSSIBILIDADE 2: Não pode ser possível atualizar uma reserva com datas abaixo da data de reserva.
 				Room number: 8021
-				Check-in date (dd/MM/yyyy): 23/09/2019
-				Check-out date (dd/MM/yyyy): 26/09/2019
-				Reservation: Room 8021, check-in: 23/09/2019, check-out: 26/09/2019, 3 nights
+				Check-in date (dd/MM/yyyy): 23/09/2030
+				Check-out date (dd/MM/yyyy): 26/09/2030
+				Reservation: Room 8021, check-in: 23/09/2030, check-out: 26/09/2030, 3 nights
 				
 				Enter data to update the reservation:
 				Check-in date (dd/MM/yyyy): 24/09/2015
@@ -50,12 +63,12 @@ class Problematica {}
 				
 			- POSSIBILIDADE 3: Digitar uma data de entrada superior a data de saída na atualização de dados da reserva.
 				Room number: 8021
-				Check-in date (dd/MM/yyyy): 23/09/2019
-				Check-out date (dd/MM/yyyy): 26/09/2019
-				Reservation: Room 8021, check-in: 23/09/2019, check-out: 26/09/2019, 3 nights
+				Check-in date (dd/MM/yyyy): 23/09/2030
+				Check-out date (dd/MM/yyyy): 26/09/2030
+				Reservation: Room 8021, check-in: 23/09/2030, check-out: 26/09/2030, 3 nights
 				
 				Enter data to update the reservation:
-				Check-in date (dd/MM/yyyy): 24/09/2020
-				Check-out date (dd/MM/yyyy): 22/09/2020
+				Check-in date (dd/MM/yyyy): 24/09/2040
+				Check-out date (dd/MM/yyyy): 22/09/2040
 				Error in reservation: Check-out date must be after check-in date
 */

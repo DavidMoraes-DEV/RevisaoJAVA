@@ -9,6 +9,12 @@ import RevisaoProgOrientadaObjetos.TratamentoDeExcecoes.ExcecoesPersonalizadas.S
 
 public class Program {
 
+	/*
+	 * throws ParseException -> Significa que o método MAIN dessa classe PROGRAM pode lançar uma exceção do tipo PARSE EXCEPTION
+		- Ou seja o método pode lançar a exceção sem precisar trata-la
+		- Porque foi incluido no corpo do metodo um código que pode acontecer uma excessão desse tipo quando defini: sdf.parse(sc.next())
+		- Se outro método chamar o método MAIN deverá tratar esse exceção também ou propaga-la(THROWS) da mesma forma. (Relacionado a PILHA DE CHAMADAS DE MÉTODOS)
+	*/
 	public static void main(String[] args) throws ParseException {
 		
 		Scanner sc = new Scanner(System.in);
@@ -23,7 +29,8 @@ public class Program {
 		System.out.print("Check-out date (dd/MM/yyyy): ");
 		Date ReservationCheckOut = sdf.parse(sc.next());
 		
-		if(ReservationCheckIn.getTime() > ReservationCheckOut.getTime()) {
+		//SOLUÇÃO MUITO RUIM: Aplicar toda lógica de programação no programa principal
+		if(!ReservationCheckOut.after(ReservationCheckIn)) {
 			
 			System.out.println("Error in reservation: Check-out date must be after check-in date");
 			
@@ -39,11 +46,11 @@ public class Program {
 			System.out.print("Check-out date (dd/MM/yyyy): ");
 			ReservationCheckOut = sdf.parse(sc.next());
 			
-			if(reservation.getCheckIn().getTime() > ReservationCheckIn.getTime() || reservation.getCheckOut().getTime() > ReservationCheckOut.getTime()) { 
+			if(ReservationCheckIn.before(new Date()) || ReservationCheckOut.before(new Date()) ) { 
 				
 				System.out.println("Error in reservation: Reservation dates for update must be future dates");
 			
-			} else if( ReservationCheckIn.getTime() > ReservationCheckOut.getTime() ) {
+			} else if(!ReservationCheckOut.after(ReservationCheckIn)) {
 				
 				System.out.println("Error in reservation: Check-out date must be after check-in date");
 				

@@ -29,12 +29,21 @@ public class RevisaoDate {
 		System.out.printf("%nFormatado pré-definido: " + sdf2.format(date2)); //Formato Original sem Utilizar O formato UTC na entrada
 		Date date5 = Date.from(Instant.parse("2022-06-25T15:42:07Z")); //Quando a data esta definida no padrão UTC, ao ser chamada pelo programa ela será convertida altomaticamente no padrão local no caso do brasil 3 horas atrazada do horário UTC
 		System.out.printf("%nData no formato ISO8601 sem a formatação com TimeZone = GMT:" + sdf2.format(date5)); //Chamada do horário no formato UTC que será convertido automaticamente para o horário local
+		
 		//Para imprimir no formato local UTC deverá instanciar um novo SimpleDateFormat DEFININDO o TIMEZONE = GMT
 		SimpleDateFormat sdf3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); //Declaração igual as anteriores acima.
 		sdf3.setTimeZone(TimeZone.getTimeZone("GMT"));
 		System.out.printf("%nData no formato ISO8601 formatado com TimeZone = GMT: " + sdf3.format(date5));
 		
+		//Compara se uma data é DEPOIS de outra data .after
+		Boolean date6 = date1.after(new Date()); 
+		System.out.printf("%nA data %s é DEPOIS de 17/06/2022: %s", sdf1.format(date1), date6);
+		
+		//Compara se uma data é ANTES de outra data .after
+		Boolean date7 = date1.before(new Date()); 
+		System.out.printf("%nA data %s é ANTES de %s: %s", sdf1.format(date1), sdf1.format(new Date()), date7);
 	
+		
 	}
 }
 /*
