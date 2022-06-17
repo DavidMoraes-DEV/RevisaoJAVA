@@ -35,7 +35,7 @@ public class Program {
 			- Porém ainda contém uma lógica de validação que é a lógica abaixo que deveria estar no construtor.
 			- Não é possível colocar a Lógica abaixo no construtor pois o construtor NÃO PODE retornar uma STRING
 			- Então é necessário ter essa lógica ainda no programa principal
-		*/
+		 */
 		if(!ReservationCheckOut.after(ReservationCheckIn)) {
 			
 			System.out.println("Error in reservation: Check-out date must be after check-in date");
