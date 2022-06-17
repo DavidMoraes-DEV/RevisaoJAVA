@@ -16,7 +16,7 @@ public class ManipulandoDateComCalendar {
 		
 		//Somando uma unidade de tempo a data armazenada no calendario:
 		Calendar cal = Calendar.getInstance();
-		cal.setTime(date1); //Após instanciar o Calender e atribuir a data a ele temos agora então um  calendário com a data definida dentre dele e apartir desse calendário podemos adicionar, subtrair e etc essa data.
+		cal.setTime(date1); //Após instanciar o Calender e atribuir a data a ele temos agora então um calendário com a data definida dentre dele e apartir desse calendário podemos adicionar, subtrair e etc essa data.
 		cal.add(Calendar.HOUR_OF_DAY, 4); //Adiciona 4 horas a data armazenada no Calendar.
 		date1 = cal.getTime(); //Atualiza a variável date1 com as horas a mais definidas acima.
 		
