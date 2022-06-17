@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.TratamentoDeExcecoes.ExcecoesPersonalizadas.SolucaoRuim.application;
+package RevisaoProgOrientadaObjetos.TratamentoDeExcecoes.ExcecoesPersonalizadas.SolucaoMuitoRuim.application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -30,11 +30,8 @@ public class Program {
 		Date ReservationCheckOut = sdf.parse(sc.next());
 		
 		/*
-		 * SOLUÇÃO RUIM: Passar um pouco da lógica para a classe RESERVATION retornando uma String quando ocorrer um erro
-			- Essa solução ainda é ruim pois retorna uma string contendo o erro ou o valor NULL para indicar que não houve erro.
-			- Porém ainda contém uma lógica de validação que é a lógica abaixo que deveria estar no construtor.
-			- Não é possível colocar a Lógica abaixo no construtor pois o construtor NÃO PODE retornar uma STRING
-			- Então é necessário ter essa lógica ainda no programa principal
+		* SOLUÇÃO MUITO RUIM: Aplicar toda lógica de programação no programa principal
+			- Problema GRAVE de DELEGAÇÃO: Quem tem que ser responsável por saber sobre a reserva é a classe RESERVATION e não outra classe 
 		*/
 		if(!ReservationCheckOut.after(ReservationCheckIn)) {
 			
@@ -51,15 +48,20 @@ public class Program {
 			
 			System.out.print("Check-out date (dd/MM/yyyy): ");
 			ReservationCheckOut = sdf.parse(sc.next());
+			
+			if(ReservationCheckIn.before(new Date()) || ReservationCheckOut.before(new Date()) ) { 
 				
-			//Nessa solução ainda ruim o método UPDATEDATES retornará uma String dizendo se houve algum erro ou não
-			String error = reservation.updateDates(ReservationCheckIn, ReservationCheckOut);
-			if (error != null) {
+				System.out.println("Error in reservation: Reservation dates for update must be future dates");
+			
+			} else if(!ReservationCheckOut.after(ReservationCheckIn)) {
 				
-				System.out.println("Error in Reservation: " + error);
+				System.out.println("Error in reservation: Check-out date must be after check-in date");
 				
 			} else {
-				System.out.println("Reservation: " + reservation);
+				
+				reservation.updateDates(ReservationCheckIn, ReservationCheckOut);
+				System.out.println(reservation);
+				
 			}
 		}
 					

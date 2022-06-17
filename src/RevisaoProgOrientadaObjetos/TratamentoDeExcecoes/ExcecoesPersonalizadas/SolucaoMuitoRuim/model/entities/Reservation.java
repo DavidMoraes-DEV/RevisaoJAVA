@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.TratamentoDeExcecoes.ExcecoesPersonalizadas.SolucaoRuim.model.entities;
+package RevisaoProgOrientadaObjetos.TratamentoDeExcecoes.ExcecoesPersonalizadas.SolucaoMuitoRuim.model.entities;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,31 +40,11 @@ public class Reservation {
 		long diferenca = checkOut.getTime() - checkIn.getTime();
 		return (int) TimeUnit.DAYS.convert(diferenca, TimeUnit.MILLISECONDS);
 		
-		
 	}
 	
-	//Retorna uma string dependendo do erro se ocorrer
-	public String updateDates(Date checkIn, Date checkOut) {
-		
-		Date now = new Date();
-		if(checkIn.before(now) || checkOut.before(now) ) { 
-			
-			return "Reservation dates for update must be future dates";
-		
-		}
-		
-		if(!checkOut.after(checkIn)) {
-
-			return "Check-out date must be after check-in date";
-			
-		}
-		
-		this.checkIn = checkIn;
-		this.checkOut = checkOut;
-		
-		//Esse será o critério para mostrar que a operação UpdateDate não teve nenhuma erro
-		//Se retornar algo diferente de NULL significa que houve algum dos erros definidos acima nas estruturas IF
-		return null;
+	public void updateDates(Date checkin, Date checkout) {
+		this.checkIn = checkin;
+		this.checkOut = checkout;
 	}
 	
 	@Override
