@@ -5,7 +5,22 @@ class Problematica {}
 	- SOLUÇÃO MUITO RUIM: Aplicar toda lógica de programação no programa principal
 	- SOLUÇÃO RUIM: Implementar um método para retornar a mensagem de erro como String
 	- SOLUÇÃO BOA: Utilizar o TRATAMENTO DE EXCEÇÕES de forma adequada
-   
+	
+	- Solução 1 (MUITO RUIM): lógica de validação no programa principal
+		- Lógica de validação não delegada à reserva
+		
+	- Solução 2 (RUIM): método retornando string
+		- A semântica da operação é prejudicada
+		- Retornar string não tem nada a ver com atualização de reserva
+		- E se a operação tivesse que retornar um string?
+		- Ainda não é possível tratar exceções em construtores
+		- Ainda não há auxílio do compilador: o programador deve "lembrar" de verificar se houver erro
+		- A lógica fica estruturada em condicionais aninhadas
+		
+	- Solução 3 (BOA): Tratamento de exceções
+		- De forma adequada
+		
+ * INFORMAÇÕES IMPORTANTES:  
 	- Cláusula throws: propaga a exceção ao invés de trata-la
 	- Cláusula throw: lança a exceção / "corta" o método
  	- Exception: compilador obriga a tratar ou propagar
@@ -19,7 +34,8 @@ class Problematica {}
 			- Código mais simples. Não há aninhamento de condicionais: a qualquer momento que uma exceção for disparada, a execução é interrompida e cai no bloco catch correspondente.
 			- É possível capturar inclusive outras exceções de sistema
  
-* Fazer um programa para ler os dados de uma reserva de hotel:
+* PROBLEMÁTICA:
+	- Fazer um programa para ler os dados de uma reserva de hotel
 	- Contendo: Número do quarto, data de entrada e data de saída
 	- Mostrar os dados da reserva, inclusive sua duração em dias.
 	- Depois ler novas datas de entrada e saída.
@@ -29,9 +45,7 @@ class Problematica {}
 		- Alterações de reserva só podem ocorrer para datas futuras
 		- A data de saída deve ser maior que a data de entrada
 		
-* EXEMPLOS DE ENTRADA E SAÍDA DE DADOS
-
-	- EXEMPLOS
+	- EXEMPLOS DE ENTRADA E SAÍDA DE DADOS
 		- ENTRADAS DE DADOS:
 			Room number: 8021
 			Check-in date (dd/MM/yyyy): 23/09/2030

@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import RevisaoProgOrientadaObjetos.TratamentoDeExcecoes.ExcecoesPersonalizadas.SolucaoBoa.model.exceptions.DomainException;
+
 public class Reservation {
 	
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -12,8 +14,19 @@ public class Reservation {
 	private Date checkIn;
 	private Date checkOut;
 	
-	public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
-		super();
+	//Propagar a exceção com o throws
+	public Reservation(Integer roomNumber, Date checkIn, Date checkOut) throws DomainException {
+		
+		/*
+		 * PROGRAMAÇÃO DEFENSIVA:
+		 	- Colocar o tratamento de exceções no começo dos métodos (BOA PRÁTICA)
+		 */
+		if(!checkOut.after(checkIn)) {
+
+			throw new DomainException("Check-out date must be after check-in date");
+			
+		}
+		
 		this.roomNumber = roomNumber;
 		this.checkIn = checkIn;
 		this.checkOut = checkOut;
@@ -43,23 +56,24 @@ public class Reservation {
 		
 	}
 	
-	//Agora caso ocorra uma exceção no método será LANÇADO uma exceção.
-	public void updateDates(Date checkIn, Date checkOut) {
+	//Agora caso ocorra um erro no método, será PROPAGADO a exceção do tipo DomainException para ser TRATADA no CATCH que fica na classe Program.
+	public void updateDates(Date checkIn, Date checkOut) throws DomainException {
 		
 		Date now = new Date();
-		if(checkIn.before(now) || checkOut.before(now) ) { 
+		if(checkIn.before(now) || checkOut.before(now)) { 
 			
 			/*
 			 * Na frente da palavra THROW será instanciado uma exceção.
-			 	- Nesse caso foi instanciado uma exceção que já existe no JAVA = IllegalArgumentException() -> Usada tipicamente quando os argumentos passados no método são INVÁLIDOS.
+			 	- Nesse caso foi instanciado uma exceção PERSONALIZADA: DomainException 
+			 	
 			*/
-			throw new IllegalArgumentException("Reservation dates for update must be future dates");
+			throw new DomainException("Reservation dates for update must be future dates");
 		
 		}
 		
 		if(!checkOut.after(checkIn)) {
 
-			throw new IllegalArgumentException("Check-out date must be after check-in date");
+			throw new DomainException("Check-out date must be after check-in date");
 			
 		}
 		
