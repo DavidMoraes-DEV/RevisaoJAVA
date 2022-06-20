@@ -104,16 +104,16 @@ public class Program {
 				}
 			}
 
-			System.out.println("Arquivos e pastas gerados com sucesso!!!");
+			System.out.println("Arquivos e pastas criados com sucesso!!!");
 
 		} catch (Exception e) {
 
 			// Quando for criar a pasta com um nome que já existe naquele diretório retornará NULL
 			if (e.getMessage() == null) {
 				System.out.printf("%nJá existe uma pasta ou arquivo com esse nome!!!%n");
-			}
+			} else {
 				System.out.println(e.getMessage());
-
+			}
 		} finally {
 			sc.close();
 		}
