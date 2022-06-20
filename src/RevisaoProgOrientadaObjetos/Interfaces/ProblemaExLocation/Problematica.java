@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.Interfaces;
+package RevisaoProgOrientadaObjetos.Interfaces.ProblemaExLocation;
 
 public class Problematica {
 

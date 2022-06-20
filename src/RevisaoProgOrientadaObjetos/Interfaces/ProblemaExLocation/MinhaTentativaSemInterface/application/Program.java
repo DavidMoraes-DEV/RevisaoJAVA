@@ -1,12 +1,12 @@
-package RevisaoProgOrientadaObjetos.Interfaces.MinhaTentativaSemInterface.application;
+package RevisaoProgOrientadaObjetos.Interfaces.ProblemaExLocation.MinhaTentativaSemInterface.application;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import RevisaoProgOrientadaObjetos.Interfaces.MinhaTentativaSemInterface.model.entities.Location;
-import RevisaoProgOrientadaObjetos.Interfaces.MinhaTentativaSemInterface.model.entities.Prices;
+import RevisaoProgOrientadaObjetos.Interfaces.ProblemaExLocation.MinhaTentativaSemInterface.model.entities.Location;
+import RevisaoProgOrientadaObjetos.Interfaces.ProblemaExLocation.MinhaTentativaSemInterface.model.entities.Prices;
 
 public class Program {
 

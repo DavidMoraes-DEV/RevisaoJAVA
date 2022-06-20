@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.Interfaces.MinhaTentativaSemInterface.model.entities;
+package RevisaoProgOrientadaObjetos.Interfaces.ProblemaExLocation.MinhaTentativaSemInterface.model.entities;
 
 public class Prices {
 

@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.Interfaces.MinhaTentativaSemInterface;
+package RevisaoProgOrientadaObjetos.Interfaces.ProblemaExLocation.MinhaTentativaSemInterface;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

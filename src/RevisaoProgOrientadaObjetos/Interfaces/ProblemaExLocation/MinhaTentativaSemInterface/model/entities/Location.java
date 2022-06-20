@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.Interfaces.MinhaTentativaSemInterface.model.entities;
+package RevisaoProgOrientadaObjetos.Interfaces.ProblemaExLocation.MinhaTentativaSemInterface.model.entities;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
