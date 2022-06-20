@@ -13,7 +13,7 @@ public class ClassesFileWriter_e_BufferedWriter {
 			- Possui várias formas de instanciar o FileWriter
 				- Cria/recria o arquivo: new FileWriter(path)
 					- Se o arquivo NÃO existir ele vai ser criado
-					- Se o arquivo JÁ exisitir ele vai ser zerado e recriado
+					- Se o arquivo JÁ existir ele vai ser zerado e recriado
 					
 				- Acrescenta ao arquivo existente: new FileWriter(path, true)
 					- Vai abrir o arquivo e acrescentar o que foi definido no final do arquivo
