@@ -13,6 +13,12 @@ Fazer um programa que lê os dados da locação(Modelo do carro, instante inicial e
 bem como o valor por hora e o valor diário de locação. O programa deve então gerar a nota de pagamento
 contendo valor da locação, valor do imposto e valor total do pagamento e depois informar os dados na tela
 
+* O PRINCIPAL PROBLEMA OCORRIDO NA SOLUÇÃO SEM INTERFACE É O FORTE ACOPLAMENTE ENTRE OS DOIS SERVIÇOS RentalService e BrazilTaxService
+	- Se precisar por exemplo criar um novo TaxService como UsaTaxService teria que criar uma nova classe e auterar dois pontos no programa principal devido ao forte acoplamento
+	- Sendo nesse ponto que entra a questão da INTERFACE:
+		- Utilizando então nesse exemplo uma INTERFACE: TaxService sendo que a classe RentalService terá agora dependencia com a interface e não com o serviço específico
+		- Para manutenção aí será apenas necessário trocar a classe BrazilTaxService sem mexer na classe RentalService
+
 EXEMPLOS DE ENTRADA E SAÍDA:
 
 Enter rental data:
