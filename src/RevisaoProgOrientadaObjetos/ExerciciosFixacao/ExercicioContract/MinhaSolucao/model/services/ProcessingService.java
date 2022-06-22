@@ -1,16 +1,17 @@
-package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.services;
+package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.services;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.entities.Contract;
-import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.entities.Installments;
+import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.entities.Contract;
+import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.entities.Installment;
 
 public class ProcessingService {
 
 	private Integer numberInstallments;
-	private PaymentService paymentService;
 	
+	private PaymentService paymentService;
+
 	public ProcessingService(Integer numberInstallments, PaymentService paymentService) {
 		this.numberInstallments = numberInstallments;
 		this.paymentService = paymentService;
@@ -34,7 +35,7 @@ public class ProcessingService {
 			//Valor final da parcela aplicando os juros e taxas cobradas por um serviço de pagamento online.
 			Double finalInstallmentAmount = paymentService.payment(initialInstallmentAmount, i);
 
-			contract.addInstallment(new Installments(dateInstallment, finalInstallmentAmount));
+			contract.addInstallment(new Installment(dateInstallment, finalInstallmentAmount));
 		}
 	}
 }

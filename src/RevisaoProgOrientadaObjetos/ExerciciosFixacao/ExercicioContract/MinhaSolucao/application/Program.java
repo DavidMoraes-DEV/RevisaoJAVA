@@ -1,13 +1,13 @@
-package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.application;
+package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.application;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.entities.Contract;
-import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.services.PaypalPaymentService;
-import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.services.ProcessingService;
+import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.entities.Contract;
+import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.services.PaypalPaymentService;
+import RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.services.ProcessingService;
 
 public class Program {
 

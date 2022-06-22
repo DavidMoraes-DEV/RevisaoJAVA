@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.entities;
+package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.entities;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class Contract {
 	private Date start;
 	private Double totalValue;
 	
-	private List<Installments> installments = new ArrayList<>();
+	private List<Installment> installments = new ArrayList<>();
 	
 	public Contract(Integer number, Date start, Double totalValue) {
 		this.number = number;
@@ -43,15 +43,11 @@ public class Contract {
 		this.totalValue = totalValue;
 	}
 
-	public List<Installments> getInstallments() {
-		return installments;
-	}
-
-	public void addInstallment(Installments installment) {
+	public void addInstallment(Installment installment) {
 		installments.add(installment);
 	}
 	
-	public void removeInstallment(Installments installment) {
+	public void removeInstallment(Installment installment) {
 		installments.remove(installment);
 	}
 	
@@ -61,7 +57,7 @@ public class Contract {
 		StringBuilder sb = new StringBuilder();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
-		for(Installments installment : installments) {
+		for(Installment installment : installments) {
 			sb.append(sdf.format(installment.getDueDate()) + " - $ " + String.format("%.2f", installment.getValue())  + "\n");
 		}
 		

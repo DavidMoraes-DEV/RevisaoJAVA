@@ -1,13 +1,13 @@
-package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.entities;
+package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.entities;
 
 import java.util.Date;
 
-public class Installments {
+public class Installment {
 	
 	private Double value;
 	private Date dueDate;
 	
-	public Installments(Date dueDate, Double value) {
+	public Installment(Date dueDate, Double value) {
 		this.dueDate = dueDate;
 		this.value = value;
 	}

@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.model.services;
+package RevisaoProgOrientadaObjetos.ExerciciosFixacao.ExercicioContract.MinhaSolucao.model.services;
 
 public interface PaymentService {
 
