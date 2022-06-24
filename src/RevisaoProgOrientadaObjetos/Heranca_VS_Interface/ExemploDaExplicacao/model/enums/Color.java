@@ -3,6 +3,7 @@ package RevisaoProgOrientadaObjetos.Heranca_VS_Interface.ExemploDaExplicacao.mod
 public enum Color {
 
 	BLACK,
+	WHITE,
 	BLUE,
 	RED;
 }

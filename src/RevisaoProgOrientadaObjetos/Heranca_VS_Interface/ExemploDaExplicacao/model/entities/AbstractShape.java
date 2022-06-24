@@ -3,7 +3,7 @@ package RevisaoProgOrientadaObjetos.Heranca_VS_Interface.ExemploDaExplicacao.mod
 import RevisaoProgOrientadaObjetos.Heranca_VS_Interface.ExemploDaExplicacao.model.enums.Color;
 import RevisaoProgOrientadaObjetos.Heranca_VS_Interface.ExemploDaExplicacao.model.services.Shape;
 
-//Como é uma classe ABSTRATA NÃO precisa cumprir o contrato implementando a operação AREA()
+//Como é uma classe ABSTRATA NÃO precisa cumprir o contrato implementando NA interface: a operação AREA()
 public abstract class AbstractShape implements Shape {
 
 	private Color color;
