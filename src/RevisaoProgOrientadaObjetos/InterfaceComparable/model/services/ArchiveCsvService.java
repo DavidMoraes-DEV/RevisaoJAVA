@@ -8,15 +8,15 @@ public class ArchiveCsvService implements FolderService, FileService {
 	private static final String DEFAULT_PATH = "C:\\Temp\\";
 	private String folderName;
 	private String fileName;
-	private String filePath = DEFAULT_PATH + folderName + "\\" + fileName + ".csv";
+	
+	public ArchiveCsvService() {
+	}
 	
 	public ArchiveCsvService(String folderName) {
-		super();
 		this.folderName = folderName;
 	}
 
 	public ArchiveCsvService(String folderName, String fileName) {
-		super();
 		this.folderName = folderName;
 		this.fileName = fileName;
 	}
@@ -29,15 +29,14 @@ public class ArchiveCsvService implements FolderService, FileService {
 		return fileName;
 	}
 
-	public String getFilePath() {
-		return filePath;
+	public String filePath () {
+		return DEFAULT_PATH + folderName + "\\" + fileName + ".csv";
 	}
 
 	@Override
 	public void newFileCSV() throws IOException {
 
-		String fullPath = filePath;
-		File file = new File(fullPath);
+		File file = new File(filePath());
 		boolean createFile = file.createNewFile();
 		
 		if(!createFile) {
