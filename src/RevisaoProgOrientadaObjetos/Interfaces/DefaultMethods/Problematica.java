@@ -11,5 +11,21 @@ public class Problematica {
  	
  	- Outras Vantagens:
  		- Manter a retrocompatibilidade com sistemas existentes
- 		- Permitir que "interfaces funcionais" (que devem conter apenas um método) possam prover outras operações padrão reutilizáveis		
+ 			- Quando o JAVA 8 introduziu os métodos padrões em algumas interfaces da biblioteca do JAVA elas continuaram compatíveis com sistemas anteriores.
+ 		- Permitir que "interfaces funcionais" (que devem conter apenas um método) possam prover outras operações padrão reutilizáveis
+
+* PROBLEMA EXEMPLO:
+	- Fazer um programa para ler uma quantia e a duração em meses de um empréstimo. Informar o valor a ser pago depois de decorrido o prazo do empréstimo, conforme
+	regras de juros do Brasil. A regra de cálculo de juros do Brasil é juro composto padrão de 2% ao mês.
+
+EXEMPLO DE ENTRADA E SAÍDA:
+Amount: 200.00
+Months: 2
+Payment after 3 months:
+212.24
+
+* QUESTIONAMENTO: E se existisse outro serviço de juros de outro pais?
+
+
+
 */
