@@ -22,14 +22,16 @@ public class Program {
 		System.out.print("Months: ");
 		Integer qtdMonths = sc.nextInt();
 	
-		Loan loan = new Loan(qtdMonths, amount, new BrazilInterestService());
-		String finishValue = String.format("%.2f", loan.getInterestService().payment(amount, qtdMonths));
+		//Brasil tem juros compostos de 2.0%
+		Loan loan = new Loan(qtdMonths, amount, new BrazilInterestService(2.0));
+		String finishValue = String.format("%.2f", loan.getInterestService().payment(loan));
 		
 		
 		System.out.printf("Amount for Payment Brazil: " + finishValue);
-		
-		loan = new Loan(qtdMonths, amount, new UsaInterestService());
-		finishValue = String.format("%.2f", loan.getInterestService().payment(amount, qtdMonths));
+
+		//USA tem juros compostos de 1.0%
+		loan = new Loan(qtdMonths, amount, new UsaInterestService(1.0));
+		finishValue = String.format("%.2f", loan.getInterestService().payment(loan));
 		
 		System.out.printf("%nAmount for Payment USA: " + finishValue);
 		

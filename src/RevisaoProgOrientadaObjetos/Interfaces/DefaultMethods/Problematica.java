@@ -25,7 +25,14 @@ Payment after 3 months:
 212.24
 
 * QUESTIONAMENTO: E se existisse outro serviço de juros de outro pais?
+	- Aqui entra a questão de se utilizar os Default Methods para não precisar declarar duas vezes a função Payment()
 
-
+* CONSIDERAÇÕES IMPORTANTES:
+	- SIM: Agora as interfaces podem prover REUSO
+	- SIM: Agora temos uma forma de HERANÇA MÚLTIPLA
+		- MAS o compilador reclama se houver mais de um método com a mesma assinatura, obrigando a sobrescreve-lo
+	
+	- Interfaces ainda são bem diferentes de classes abstratas.
+	- Interfaces não possuem recursos tais como construtores e atributos.
 
 */

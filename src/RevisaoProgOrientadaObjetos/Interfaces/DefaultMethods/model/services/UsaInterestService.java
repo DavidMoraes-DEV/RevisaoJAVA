@@ -1,17 +1,15 @@
 package RevisaoProgOrientadaObjetos.Interfaces.DefaultMethods.model.services;
 
-import java.security.InvalidParameterException;
-
 public class UsaInterestService implements InterestService{
 
-private static Double InterestRate = 0.01;
+	private double interestRate;
 	
-	public Double payment(Double amount, int months) {
-		
-		if(months < 1) {
-			throw new InvalidParameterException("Months must be greater than zero");
-		}
-		
-		return amount * Math.pow(1+InterestRate, months);
+	public UsaInterestService(double interestRate) {
+		this.interestRate = interestRate;
+	}
+	
+	@Override
+	public Double getInterestRate() {
+		return interestRate;
 	}
 }

@@ -2,7 +2,7 @@ package RevisaoProgOrientadaObjetos.Interfaces.DefaultMethods.model.entities;
 
 import RevisaoProgOrientadaObjetos.Interfaces.DefaultMethods.model.services.InterestService;
 
-public class Loan {
+public class Loan implements InterestService{
 
 	private Integer deadline;
 	private Double amount;
@@ -37,5 +37,11 @@ public class Loan {
 
 	public void setInterestService(InterestService interestService) {
 		this.interestService = interestService;
+	}
+
+	@Override
+	public Double getInterestRate() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
