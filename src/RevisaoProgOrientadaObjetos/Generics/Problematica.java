@@ -9,11 +9,13 @@ informar qual foi o primeiro valor informado.
 
 EXEMPLO DE ENTRADA E SAÍDA:
 
+* ENTRADAS:
 How many values? 3
 10
 8
 23
 
+* SAÍDA:
 [10, 8, 23]
 Firts: 10
 
