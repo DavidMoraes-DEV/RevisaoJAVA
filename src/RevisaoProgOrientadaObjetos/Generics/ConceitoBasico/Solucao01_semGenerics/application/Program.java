@@ -1,8 +1,8 @@
-package RevisaoProgOrientadaObjetos.Generics.Solucao01_semGenerics.application;
+package RevisaoProgOrientadaObjetos.Generics.ConceitoBasico.Solucao01_semGenerics.application;
 
 import java.util.Scanner;
 
-import RevisaoProgOrientadaObjetos.Generics.Solucao01_semGenerics.services.PrintService;
+import RevisaoProgOrientadaObjetos.Generics.ConceitoBasico.Solucao01_semGenerics.services.PrintService;
 
 public class Program {
 

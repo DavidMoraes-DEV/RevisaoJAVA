@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.Generics;
+package RevisaoProgOrientadaObjetos.Generics.ConceitoBasico;
 
 public class Problematica {
 }

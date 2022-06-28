@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.Generics.Solucao02_comGenerics.servicess;
+package RevisaoProgOrientadaObjetos.Generics.ConceitoBasico.Solucao02_comGenerics.servicess;
 
 import java.util.ArrayList;
 import java.util.List;
