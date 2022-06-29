@@ -20,7 +20,7 @@ public class Program {
 		
 		List<? extends Number> list = intList; //Lista que recebe Tipo Number e qualquer subTipo de Number(Int, double, float, long, byte e etc...)
 		
-		//Number x = list.get(0); //É possível acessar os elementos da lista
+		Number x = list.get(0); /*É possível acessar os elementos da lista*/ x.byteValue(); //Apenas para sumir o aviso de que a variável x nunca foi usada
 		
 		//list.add(20); //Não é possível adicionar elementos nessa lista -> Vai dar erro de compilação pois o compilador não sabe se o valor contido nessa lista genérica será compatível com algum outro possível tipo Number
 	
