@@ -27,7 +27,7 @@ public class RevisaoDate {
 		System.out.println("Data Atual com new Date(System.currentTimeMillis()):" + sdf2.format(date4));
 		
 		System.out.printf("%nFormatado pré-definido: " + sdf2.format(date2)); //Formato Original sem Utilizar O formato UTC na entrada
-		Date date5 = Date.from(Instant.parse("2022-06-25T15:42:07Z")); //Quando a data esta definida no padrão UTC, ao ser chamada pelo programa ela será convertida altomaticamente no padrão local no caso do brasil 3 horas atrazada do horário UTC
+		Date date5 = Date.from(Instant.parse("2022-06-25T15:42:07Z")); //Quando a data esta definida no padrão UTC, ao ser chamada pelo programa ela será convertida automaticamente no padrão local no caso do brasil 3 horas atrazada do horário UTC
 		System.out.printf("%nData no formato ISO8601 sem a formatação com TimeZone = GMT:" + sdf2.format(date5)); //Chamada do horário no formato UTC que será convertido automaticamente para o horário local
 		
 		//Para imprimir no formato local UTC deverá instanciar um novo SimpleDateFormat DEFININDO o TIMEZONE = GMT

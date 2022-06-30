@@ -9,6 +9,7 @@ public class Conceitos {
 		- Elementos não possuem posição, podendo ou não possuir ordem
 		- Acesso, inserlçao e remoção de elementos são rápidos
 		- Oferece operações eficientes de conjunto: interseção, união, diferença...
+		
 		- Principais implementações:
 			- HashSet - Mais rápido (operações O(1) em tabela hash) e não ordenado
 				- É o mais rápido de todos para comparar objetos porém ele NÃO garante a ordem em que os objetos foi adicionados na coleção.
