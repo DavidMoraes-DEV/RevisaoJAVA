@@ -124,16 +124,16 @@ public class Program {
 				- Compara as referências (ponteiros) dos objetos.
 		*/
 		
-		Set<Product> setProducts = new HashSet<>();
+		Set<Product> setProducts1 = new HashSet<>();
 		
-		setProducts.add(new Product("TV", 900.00));
-		setProducts.add(new Product("Notebook", 1200.00));
-		setProducts.add(new Product("Tablet", 400.00));
+		setProducts1.add(new Product("TV", 900.00));
+		setProducts1.add(new Product("Notebook", 1200.00));
+		setProducts1.add(new Product("Tablet", 400.00));
 		
-		Product prod = new Product("Notebook", 1200.00);
+		Product prod1 = new Product("Notebook", 1200.00);
 		
-		System.out.printf("%nColeção setProducts:%n");
-		for(Product obj : setProducts) {
+		System.out.printf("%nColeção setProducts1:%n");
+		for(Product obj : setProducts1) {
 			System.out.println(obj);
 		}
 		
@@ -145,6 +145,30 @@ public class Program {
 					- O que esta sendo comparado nesse caso é as referências(PONTEIROS) da variável e não seu conteúdo.
 		*/
 		System.out.printf("%nExiste NOTEBOOK na coleção:%n");
-		System.out.println(setProducts.contains(prod));
+		System.out.println(setProducts1.contains(prod1));
+		
+		
+		/*
+		 * COMO TreeSet COMPARA OS ELEMENTOS
+		 	- Se não implemetar a INTERFACE COMPARABLE na classe cujo os dados serão comparado:
+		 		- Dara uma exceção: ClassCastException (A classe não pode ser convertida para COMPARABLE)
+		 	
+		 	- Então para que seja possível ordenar os objetos se faz necessário que a classe do objeto:
+		 		- Contenha a implementação COMPARABLE com a função compareTo definida para aquela classe.	
+		  
+		*/
+		Set<Product> setProducts2 = new TreeSet<>();
+		
+		setProducts2.add(new Product("TV", 900.00));
+		setProducts2.add(new Product("Notebook", 1200.00));
+		setProducts2.add(new Product("Tablet", 400.00));
+		
+		System.out.printf("%nColeção setProducts2:%n");
+		for(Product obj : setProducts2) {
+			System.out.println(obj);
+		}
+		
+		System.out.printf("%nExiste NOTEBOOK na coleção:%n");
+		System.out.println(setProducts1.contains(prod1));
 	}
 }
