@@ -36,5 +36,12 @@ public class Conceito {
 		- Classes personalizadas precisam sobrepô-las
 
 
+* COMO AS COLEÇÕES HASH TESTAM IGUALDADE?
+	- Se hashCode e equals estiverem implementados:
+		- Primeiro hashCode. Se der igual, usa equals para confirmar.
+		- Lembre-se: String, Integer, Double, etc. Já possuem equals e hashCode.
+	
+	- Se hashCode e equals NÃO estiverem implementados:
+		- Compara as referências (ponteiros) dos objetos.
 
 */

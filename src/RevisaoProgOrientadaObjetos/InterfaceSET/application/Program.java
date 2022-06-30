@@ -6,6 +6,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
+import RevisaoProgOrientadaObjetos.InterfaceSET.entities.Product;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -110,5 +112,39 @@ public class Program {
 			System.out.printf(obj + " ");
 		}
 		System.out.println();
+		
+
+		/*
+		* COMO AS COLEÇÕES HASH(SET) TESTAM IGUALDADE?
+			- Se hashCode e equals estiverem implementados:
+				- Primeiro hashCode. Se der igual, usa equals para confirmar.
+				- Lembre-se: String, Integer, Double, etc. Já possuem equals e hashCode.
+	
+			- Se hashCode e equals NÃO estiverem implementados:
+				- Compara as referências (ponteiros) dos objetos.
+		*/
+		
+		Set<Product> setProducts = new HashSet<>();
+		
+		setProducts.add(new Product("TV", 900.00));
+		setProducts.add(new Product("Notebook", 1200.00));
+		setProducts.add(new Product("Tablet", 400.00));
+		
+		Product prod = new Product("Notebook", 1200.00);
+		
+		System.out.printf("%nColeção setProducts:%n");
+		for(Product obj : setProducts) {
+			System.out.println(obj);
+		}
+		
+		/*
+		* Se a classe não tiver a implementação HashCode e Equals na classe PRODUCT:
+			- O resultado do método: .contains() irá:
+				- Retornar FALSE como se não existisse NOTEBOOK na coleção, mas EXISTE
+				- Porque se não tiver implementado as operações HashCode e Equals na classe
+					- O que esta sendo comparado nesse caso é as referências(PONTEIROS) da variável e não seu conteúdo.
+		*/
+		System.out.printf("%nExiste NOTEBOOK na coleção:%n");
+		System.out.println(setProducts.contains(prod));
 	}
 }

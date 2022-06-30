@@ -30,4 +30,12 @@ public class Conceitos {
 	- retainAll(other) - INTERSEÇÃO: Remove do conjunto os elementos não contidos em other
 	- removeAll(other) - DIFERENÇA: Remove do conjunto os elementos contidos em other.
 
+* COMO AS COLEÇÕES HASH TESTAM IGUALDADE?
+	- Se hashCode e equals estiverem implementados:
+		- Primeiro hashCode. Se der igual, usa equals para confirmar.
+		- Lembre-se: String, Integer, Double, etc. Já possuem equals e hashCode.
+	
+	- Se hashCode e equals NÃO estiverem implementados:
+		- Compara as referências (ponteiros) dos objetos.
+
 */
