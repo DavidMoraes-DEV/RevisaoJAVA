@@ -66,6 +66,7 @@ public class Program {
 		Product ps = new Product("Tv", 900.0);
 		System.out.printf("%nContains 'ps' key: " + stock.containsKey(ps));
 		
+		System.out.println();
 		for (Product key : stock.keySet()) {
 			System.out.println(key + ": " + stock.get(key));
 		}
