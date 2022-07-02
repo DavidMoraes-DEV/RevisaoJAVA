@@ -10,8 +10,18 @@ import RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities.P
 import RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities.Product2;
 
 public class Program {
-
+	
 	public static void main(String[] args) {
+		
+		/*
+		* RESUMO DAS PARTES:
+			* PARTE I:		Utilizando a comparação com a interface COMPARABLE
+			* PARTE II:		Utilizando a comparação com a interface COMPARATOR objeto de classe separada
+			* PARTE III:	Utilizando a comparação com a interface COMPARATOR objeto de classe anônima
+			* PARTE IV:		Utilizando a comparação com a interface COMPARATOR objeto de expressão lambda com e sem chaves V1 e V2
+			* PARTE V:		Utilizando a comparação com a interface COMPARATOR expressão LAMBDA "direto no argumento"
+		*/
+		
 		
 		/* PARTE I:
 		* Solução utilizando a interface COMPARABLE:
@@ -110,7 +120,6 @@ public class Program {
 			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 			
 		};
-		
 		*/
 		
 		List<Product2> list4 = new ArrayList<>();
@@ -127,6 +136,25 @@ public class Program {
 		list4.sort(comp2);
 		
 		for(Product2 p : list4) {
+			System.out.println(p);
+		}
+		
+		/*PARTE V:
+		 * EXPRESSÃO LAMBDA dentro da Função anônima diretamente como argumento para o método .sort da lista
+			- Fica muito mais consciso e resumido
+		*/
+		List<Product2> list5 = new ArrayList<>();
+				
+		list5.add(new Product2("TV", 900.00));
+		list5.add(new Product2("Notebook", 1200.00));
+		list5.add(new Product2("Tablet", 450.00));
+
+		System.out.printf("%nUtilizando a interface COMPARATOR com FUNÇÃO ANÔNIMA diretamente no método .sort():%n%n");
+				
+		//Função anônima dentro do método .sort():	
+		list5.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
+				
+		for(Product2 p : list5) {
 			System.out.println(p);
 		}
 	}

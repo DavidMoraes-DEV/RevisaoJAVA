@@ -15,6 +15,14 @@ public class Conceitos {
  			- Podemos então usar o default method "sort" da interface List:
  				- default void sort (Comparator<? super E> c)
 
+* RESUMO DAS PARTES:
+	* PARTE I:		Utilizando a comparação com a interface COMPARABLE
+	* PARTE II:		Utilizando a comparação com a interface COMPARATOR objeto de classe separada
+	* PARTE III:	Utilizando a comparação com a interface COMPARATOR objeto de classe anônima
+	* PARTE IV:		Utilizando a comparação com a interface COMPARATOR objeto de expressão lambda com e sem chaves V1 e V2
+	* PARTE V:		Utilizando a comparação com a interface COMPARATOR expressão LAMBDA "direto no argumento"
+		
+
 PARTE I:
 	* Solução utilizando a interface COMPARABLE:
 		- Classe Product não fica fechada para alterações
@@ -58,5 +66,9 @@ PARTE IV:
 			
 		return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 			
-	};												 				
+	};
+	
+PARTE V:
+	 * EXPRESSÃO LAMBDA dentro da Função anônima diretamente como argumento para o método .sort da lista
+		- Fica muito mais consciso e resumido	
 */
