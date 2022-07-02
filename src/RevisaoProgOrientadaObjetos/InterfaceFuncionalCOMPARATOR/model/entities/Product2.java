@@ -1,11 +1,11 @@
 package RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities;
 
-public class Product implements Comparable<Product>{
-
+public class Product2 {
+	
 	private String name;
 	private Double price;
 	
-	public Product(String name, Double price) {
+	public Product2(String name, Double price) {
 		this.name = name;
 		this.price = price;
 	}
@@ -26,15 +26,8 @@ public class Product implements Comparable<Product>{
 		this.price = price;
 	}
 	
-	//Dessa forma se os critérios de comparação de produtos mudar terá que alterar manualmente a classe Product, Método CompareTo()
-	@Override
-	public int compareTo(Product other) {
-		return name.toUpperCase().compareTo(other.getName().toUpperCase());
-	}
-
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", price=" + price + "]";
 	}
-	
 }
