@@ -2,6 +2,7 @@ package RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.application;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities.MyComparator;
@@ -52,6 +53,39 @@ public class Program {
 		list2.sort(new MyComparator());
 		
 		for(Product2 p : list2) {
+			System.out.println(p);
+		}
+		
+		/* PARTE III:
+		* Utilizando Comparator com uma sintaxe de CLASSE ANÔNIMA:
+			- Essa declaração não necessita da classe MyComparator separadamente
+				- Pois os critérios de comparação no método da interface Comparator (compare())
+					- Será declarado dentro da função anônima
+			
+			- Porém fica uma função anônima MUITO VERBOSA
+		*/
+		
+		List<Product2> list3 = new ArrayList<>();
+		
+		list3.add(new Product2("TV", 900.00));
+		list3.add(new Product2("Notebook", 1200.00));
+		list3.add(new Product2("Tablet", 450.00));
+
+		System.out.printf("%nUtilizando a interface COMPARATOR com CLASSE ANÔNIMA:%n%n");
+		
+		//Classe anônima
+		Comparator<Product2> comp = new Comparator<Product2>() {
+
+			@Override
+			public int compare(Product2 p1, Product2 p2) {
+				return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+			}
+			
+		};
+		
+		list3.sort(comp);
+		
+		for(Product2 p : list3) {
 			System.out.println(p);
 		}
 	}

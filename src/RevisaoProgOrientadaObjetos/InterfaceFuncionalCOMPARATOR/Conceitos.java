@@ -5,8 +5,6 @@ public class Conceitos {
 }
 /*
 * INTERFACE COMPARATOR
-	- 
- 
  
  * PROBLEMA EXEMPLO:
  	- Suponha uma classe Product com os atributos name e price.
@@ -31,5 +29,13 @@ PARTE II:
 					- 0 se os dois objetos for iguais
 					- -1 Numero negativo se o primeiro for menor que o segundo
 					- 1  Numero positivo se o primeiro for maior que o segundo
+					
+PARTE III:
+	* Utilizando Comparator com uma sintaxe de CLASSE ANÔNIMA:
+		- Essa declaração não necessita da classe MyComparator separadamente
+			- Pois os critérios de comparação no método da interface Comparator (compare())
+				- Será declarado dentro da função anônima
+			
+		- Porém fica uma função anônima MUITO VERBOSA					
 												 				
 */
