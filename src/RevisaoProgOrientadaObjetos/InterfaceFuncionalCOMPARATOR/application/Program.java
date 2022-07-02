@@ -88,5 +88,46 @@ public class Program {
 		for(Product2 p : list3) {
 			System.out.println(p);
 		}
+		
+		/* PARTE IV:
+		* Utilizando Comparator com uma sintaxe de FUNÇÃO ANÔNIMA (Também conhecida como: arrow function):
+			- Utiliza expressões LAMBDA que em programação é uma FUNÇÃO ANÔNIMA.
+				- Fica muito mais enxuto.
+			- Faz inferencia de tipos, dispensando a declaração do tipo das variáveis p1 e p2, pois se torna opicional a declaração
+		
+		* SINTAXE V1 Função Anônima: Recomendada para quando se tem várias linhas na função anônima.
+		Comparator<Product2> comp2 = (p1, p2) -> {
+			
+			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+			Código...
+			Código...
+			Código...
+		};
+		
+		* SINTAXE V2 Função Anônima: Recomendada para quando se tem apenas UMA linha na função anônima.
+		Comparator<Product2> comp2 = (p1, p2) -> {
+			
+			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+			
+		};
+		
+		*/
+		
+		List<Product2> list4 = new ArrayList<>();
+		
+		list4.add(new Product2("TV", 900.00));
+		list4.add(new Product2("Notebook", 1200.00));
+		list4.add(new Product2("Tablet", 450.00));
+
+		System.out.printf("%nUtilizando a interface COMPARATOR com FUNÇÃO ANÔNIMA:%n%n");
+		
+		//Função anônima V2:
+		Comparator<Product2> comp2 = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+				
+		list4.sort(comp2);
+		
+		for(Product2 p : list4) {
+			System.out.println(p);
+		}
 	}
 }
