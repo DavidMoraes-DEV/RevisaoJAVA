@@ -47,7 +47,7 @@ public class Program {
 		//O removeIf recebendo um PREDICATE em formato de Method Reference COM Método Estático
 		list2.removeIf(Product2::staticProductPredicate); //Product2::staticProductPredicat = (NomedaClasse::NomeDoMetodo) É chamado de Method Reference.
 
-		System.out.printf("%nResultado com PREDICATE recebendo uma EXPRESSÃO LAMBDA:%n");
+		System.out.printf("%nResultado com PREDICATE recebendo uma referencia para um método ESTÁTICO:%n");
 		for(Product2 prod : list2) {
 			System.out.println(prod);
 		}
@@ -64,7 +64,7 @@ public class Program {
 		//O removeIf recebendo um PREDICATE em formato de Method Reference SEM Método Estático
 		list3.removeIf(Product2::nonStaticProductPredicate); 
 				
-		System.out.printf("%nResultado com PREDICATE recebendo uma referencia para um método ESTÁTICO:%n");
+		System.out.printf("%nResultado com PREDICATE recebendo uma referencia para um método SEM SER ESTÁTICO:%n");
 		for(Product2 prod : list3) {
 			System.out.println(prod);
 		}
@@ -96,7 +96,7 @@ public class Program {
 		list5.add(new Product("Tablet", 350.00));
 		list5.add(new Product("HD Case", 80.90));
 		
-		//O removeIf recebendo um PREDICATE em formato de EXPRESSÃO LAMBDA INLINE dretamente como argumento
+		//O removeIf recebendo um PREDICATE em formato de EXPRESSÃO LAMBDA INLINE diretamente como argumento
 		list5.removeIf(x -> x.getPrice() > 100);
 
 		System.out.printf("%nResultado com PREDICATE recebendo uma EXPRESSÃO LAMBDA diretamente como argumento:%n");
