@@ -1,13 +1,13 @@
-package RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.application;
+package ProgramacaoFuncional.InterfaceFuncionalCOMPARATOR.application;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities.MyComparator;
-import RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities.Product1;
-import RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities.Product2;
+import ProgramacaoFuncional.InterfaceFuncionalCOMPARATOR.model.entities.MyComparator;
+import ProgramacaoFuncional.InterfaceFuncionalCOMPARATOR.model.entities.Product1;
+import ProgramacaoFuncional.InterfaceFuncionalCOMPARATOR.model.entities.Product2;
 
 public class Program {
 	

@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR.model.entities;
+package ProgramacaoFuncional.InterfaceFuncionalCOMPARATOR.model.entities;
 
 import java.util.Comparator;
 

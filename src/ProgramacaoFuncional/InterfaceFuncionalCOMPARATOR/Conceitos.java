@@ -1,4 +1,4 @@
-package RevisaoProgOrientadaObjetos.InterfaceFuncionalCOMPARATOR;
+package ProgramacaoFuncional.InterfaceFuncionalCOMPARATOR;
 
 public class Conceitos {
 
