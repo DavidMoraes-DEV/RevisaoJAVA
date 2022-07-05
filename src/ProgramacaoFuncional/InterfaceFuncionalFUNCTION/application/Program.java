@@ -3,12 +3,11 @@ package ProgramacaoFuncional.InterfaceFuncionalFUNCTION.application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import ProgramacaoFuncional.InterfaceFuncionalFUNCTION.entities.UpperCaseName;
 import ProgramacaoFuncional.InterfaceFuncionalFUNCTION.entities.Product;
+import ProgramacaoFuncional.InterfaceFuncionalFUNCTION.entities.UpperCaseName;
 
 public class Program {
 public static void main(String[] args) {
