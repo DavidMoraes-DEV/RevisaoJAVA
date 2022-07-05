@@ -2,6 +2,7 @@ package ProgramacaoFuncional.FormatoStream.application;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Program {
@@ -40,5 +41,24 @@ public class Program {
 		String result4 = Arrays.toString(st4.limit(10).toArray());
 		System.out.printf("%nNova Stream utilizando Stream.iterate() limitida pelo .limit(10):  %s%n", result4);
 
+		
+		//EXEMPLO DE PIPELINE -> O pipeline é composto por zero ou mais operações intermediárias e uma terminal.
+		System.out.printf("%nEXEMPLOS DE PIPELINE:%n");
+		//EXEMPLO 01:
+		Stream<Integer> st5 = list.stream().map(x -> x * 10); //Pipeline COM operações INTERMEDIÁRIAS: .map(), e SEM uma operação TERMINAL.
+		System.out.printf("%nUtilizando .map():%n%s%n", Arrays.toString(st5.toArray()));
+		
+		//EXEMPLO 02:
+		int sum = list.stream().reduce(0, (x, y) -> x + y); //Pipeline SEM operações INTERMEDIÁRIAS, apenas a operação TERMINAL: .reduce() UTILIZANDO dois argumentos (x, y) para realizar um cálculo
+		System.out.printf("%nUtilizando .reduce():%n%d%n", sum);
+		
+		//EXEMPLO 03:
+		//PIPELINE com 2 operações INTERMEDIÁRIAS e 1 operação TERMINAL:
+		List<Integer> newList = list.stream()	//Cria uma Stream apartir da lista
+				.filter(x -> x % 2 == 0)		//Operação INTERMEDIÁRIA pegando apenas os numeros pares da lista
+				.map(x -> x * 10)				//Operação INTERMEDIÁRIA multiplicando por 10 os numeros pares filtrados pelo . filter()
+				.collect(Collectors.toList());	//Operação TERMINAL convertendo o resultado do .map em formato de lista
+		
+		System.out.printf("%nUtilizando .filter().map().collect():%n%s%n", Arrays.toString(newList.toArray()));
 	}
 }
